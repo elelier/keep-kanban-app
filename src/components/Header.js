@@ -1,15 +1,16 @@
 import React from 'react';
-import SEO from './SEO';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
-    return (
-        <>
-            <SEO title="Your Site Title" description="Description of your site" />
-            <header>
-                <h1>Your Site Header</h1>
-            </header>
-        </>
-    );
-};
+const Header = () => (
+    <header>
+        <nav>
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+            </ul>
+        </nav>
+    </header>
+);
 
 export default Header;
